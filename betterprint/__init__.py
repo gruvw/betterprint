@@ -191,7 +191,7 @@ def custom_LOGFORMAT(fmt, datefmt):
 def disable_LOGFILE():
     """
     Disables the creation of the log file and the logging into an existing log file for the next betterprint functions.
-    You should call this before the initialisation.
+    You should call this before the initialization.
     
     #### Example:
     

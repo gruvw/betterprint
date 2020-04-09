@@ -19,6 +19,8 @@ In addition to all that I added a simple and nice feature which is multiple prin
 
 It also had to be fully customizable because I hate when I am forced to use some part of a module that I do not really like 💯.
 
+Feel free to make a pull request if you have any upgrade idea.
+
 That is it! A new way to print things in python! ✅
 
 ## Features
@@ -69,7 +71,7 @@ This module uses 3 other modules that it imports:
 
 The full documentation 📄 below is coming directly from the code's docstring. It makes the documentation readable directly from any compatible IDE or text editors. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
 
-### Initialisation `init()`
+### Initialization `init()`
 
 You should call this function before logging everything in your program.
 Initializes the module: creates the log file in the right path and defines the logging format.
@@ -177,7 +179,7 @@ bp.exit()  # Exit
 ### Disable the log file feature `disable_LOGFILE()`
 
 Disables the creation of the log file and the logging into an existing log file for the next betterprint functions.
-You should call this before the initialisation.
+You should call this before the initialization.
 
 #### Example
 
