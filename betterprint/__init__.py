@@ -42,6 +42,7 @@ This module uses 3 other modules that it imports:
 - logging
 - time
 - os
+(no need to install anything, all the 3 modules are in the Standard Python Module Library)
 
 
 This module was developed by [@Gruvw](https://github.com/gruvw).
@@ -67,9 +68,9 @@ def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.lo
     """
     ### Initialization
     
-    You should call this function before logging everything in your program.
+    You should call this function before logging anything in your program.
     Initializes the module: creates the log file in the right path and defines the logging format.
-    All the different parameters are here to set each variable without using the proper function if you want.
+    If needed all the different parameters are here to set each variable without using the proper function.
     """
     
     global _PRINTOUT
@@ -113,7 +114,7 @@ def exit():
     """
     ### Exit
     
-    You should call this function before the end of your program.
+    You should call this function before the ending of your program.
     Terminates the logging module and finishes the log file.
     """
     

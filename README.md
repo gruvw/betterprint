@@ -4,20 +4,20 @@
 
 ## Description
 
-I created this module because I had enough to write and write the same piece of code every time I needed to print something in Python 💢.
-I wanted 2 things:
+I created this module because I had had enough of writing and rewriting the same piece of code every time I needed to print something in Python 💢.
+I wanted two things:
 
-- Be able to keep what I had printed on the console after I have closed it -> log file 📁
-- See the time when the print was executed -> print prefix ⌚️
+- To be able to keep what I had printed on the console after I having closed it -> log file 📁
+- To see the time when the print was executed -> print prefix ⌚️
 
 In addition to all that I added a simple and nice feature which is multiple print "types":
 
 - Information [INFO] -> the basic one, replaces the old `print`
 - Debugging [DEBUG] -> when you print something just to see a variable content, Oh yeah you need this!
 - Warning [WARNING] -> when you need to show a warning
-- Error [ERROR] -> when you need to display that an error occurred, do not always use `raise` which print a massive and ugly block of red code inside your clean and sweet console
+- Error [ERROR] -> when you need to display that an error occurred, so we do not need to use `raise` which prints a massive and ugly block of red code inside your clean and sweet console
 
-It also had to be fully customizable because I hate when I am forced to use some part of a module that I do not really like 💯.
+It also had to be fully customizable because I hate it when I am forced to use some part of a module that I do not really like 💯.
 
 Feel free to make a pull request if you have any upgrade idea.
 
@@ -65,17 +65,17 @@ This module uses 3 other modules that it imports:
 - time
 - os
 
-(no need to install anythings, all the 3 modules are in the Standard Python Module Library)
+(no need to install anything, all the 3 modules are in the Standard Python Module Library)
 
 ## Documentation
 
-The full documentation 📄 below is coming directly from the code's docstring. It makes the documentation readable directly from any compatible IDE or text editors. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
+The full documentation 📄 below comes directly from the code's docstring. It makes the documentation readable directly from any compatible IDE or text editors. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Initialization `init()`
 
-You should call this function before logging everything in your program.
+You should call this function before logging anything in your program.
 Initializes the module: creates the log file in the right path and defines the logging format.
-All the different parameters are here to set each variable without using the proper function if you want.
+If needed all the different parameters are here to set each variable without using the proper function.
 
 #### Definition
 
@@ -87,7 +87,7 @@ def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.lo
 
 ### Exit `exit()`
 
-You should call this function before the end of your program.
+You should call this function before the ending of your program.
 Terminates the logging module and finishes the log file.
 
 ### Information `info(text)`
