@@ -44,7 +44,7 @@ This module uses 3 other modules that it imports:
 - os
 
 
-This module has been developped by [@Gruvw](https://github.com/gruvw).
+This module was developed by [@Gruvw](https://github.com/gruvw).
 """
 
 

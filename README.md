@@ -234,3 +234,5 @@ bp.enable_PRINTOUT()  # Enables the console printing
 bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
 bp.exit()  # Finishes the logging session
 ```
+
+This module was developed by [@Gruvw](https://github.com/gruvw).
