@@ -24,7 +24,7 @@ That is it! A new way to print things in python! ✅
 ## Features
 
 Use BetterPrint to have a nice prefix before printing anything on the console output.
-It also creates a clean log file where you can find anything that you have printed during the program execution.
+It also creates a clean log file where you can find anything that you have printed during the program execution. 😊
 
 ## Usage
 
@@ -40,7 +40,7 @@ bp.info("Everything is set up properly!")
 bp.exit()  # Finishes the logging file
 ```
 
-## Default example
+## Default example ✏️
 
 ```python
 import betterprint as bp
@@ -67,7 +67,7 @@ This module uses 3 other modules that it imports:
 
 ## Documentation
 
-The full documentation below is coming directly from the code's docstring. It makes the documentation readable directly from any compatible IDE or text editors. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
+The full documentation 📄 below is coming directly from the code's docstring. It makes the documentation readable directly from any compatible IDE or text editors. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Initialisation `init()`
 
