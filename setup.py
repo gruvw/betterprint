@@ -3,7 +3,7 @@ setup(
   name = 'betterprint',         # How you named your package folder (MyLib)
   packages = ['betterprint'],   # Chose the same as "name"
   version = '1.0',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  license='GNU GPLv3',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Use BetterPrint to have a nice prefix before printing anything on the console output. It also creates a nice log file where you can find anything that you have printed during the program execution. Take a look at the GitHub repository where you can also find the documentation: https://github.com/gruvw/betterprint',   # Give a short description about your library
   author = 'Gruvw',                   # Type in your name
   author_email = 'gruvw.dev@gmail.com',      # Type in your E-Mail
