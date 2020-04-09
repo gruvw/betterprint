@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'betterprint',         # How you named your package folder (MyLib)
   packages = ['betterprint'],   # Chose the same as "name"
-  version = '0.6',      # Start with a small number and increase it with every change you make
+  version = '0.7',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Use BetterPrint to have a nice prefix before printing anything on the console output. It also creates a nice log file where you can find anything that you have printed during the program execution.',   # Give a short description about your library
   author = 'Gruvw',                   # Type in your name
   author_email = 'gruvw.dev@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/gruvw',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/gruvw/betterprint/archive/v_0.6.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/gruvw/betterprint/archive/v_0.7.tar.gz',    # I explain this later on
   keywords = ['print', 'log', 'logging', 'time', 'console', 'better', 'betterprint', 'out', 'file', 'logs'],   # Keywords that define your package best
   install_requires=[],
   classifiers=[

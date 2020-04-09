@@ -4,22 +4,22 @@
 
 ## Description
 
-I created this module because I had enough to write and write the same piece of code every time I needed to print something in Python.
+I created this module because I had enough to write and write the same piece of code every time I needed to print something in Python 💢.
 I wanted 2 things:
 
-- Be able to keep what I had printed on the console after I have closed it -> log file
-- See the time when the print was executed -> print prefix
+- Be able to keep what I had printed on the console after I have closed it -> log file 📁
+- See the time when the print was executed -> print prefix ⌚️
 
-I added a simple and nice feature which is multiple print "types":
+In addition to all that I added a simple and nice feature which is multiple print "types":
 
 - Information [INFO] -> the basic one, replaces the old `print`
 - Debugging [DEBUG] -> when you print something just to see a variable content, Oh yeah you need this!
 - Warning [WARNING] -> when you need to show a warning
-- Error [ERROR] -> when you need to display that an error occurred, don't always use `raise` wich print a massive and ugly block of red code inside your clean and sweet console
+- Error [ERROR] -> when you need to display that an error occurred, do not always use `raise` which print a massive and ugly block of red code inside your clean and sweet console
 
-I also had to be fully customizable cause I hate when I am forced to use some part of a module that I do not really like.
+It also had to be fully customizable because I hate when I am forced to use some part of a module that I do not really like 💯.
 
-That is it! A new way to print things in python!
+That is it! A new way to print things in python! ✅
 
 ## Features
 
