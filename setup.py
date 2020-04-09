@@ -17,7 +17,7 @@ setup(
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: GNU GPLv3 License',   # Again, pick a license
     'Programming Language :: Python :: 3.x.x',
-    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3',      #Specify which python versions that you want to support
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
