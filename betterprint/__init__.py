@@ -16,7 +16,7 @@ import betterprint as bp
 
 bp.init()  # Initializes the log file and the printing format
 
-bp.info("Everything is setted up properly!")
+bp.info("Everything is set up properly!")
 
 bp.exit()  # Finishes the logging file
 ```
@@ -69,7 +69,7 @@ def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.lo
     
     You should call this function before logging everything in your program.
     Initializes the module: creates the log file in the right path and defines the logging format.
-    All the diffrent parameters are here to set each variable without using the proper function if you want.
+    All the different parameters are here to set each variable without using the proper function if you want.
     """
     
     global _PRINTOUT
@@ -136,7 +136,7 @@ def custom_LOGPATH(path):
     ```python
     bp.custom_LOGPATH("logs_files/log_from_%d-%m-%y.log")
     bp.init()  # Initialization
-    bp.info("Everything is setted up properly!")
+    bp.info("Everything is set up properly!")
     bp.exit()  # Exit
     ```
     """
@@ -156,7 +156,7 @@ def custom_PRINTPREFIXFORMAT(printPrefixFormat):
     ```python
     bp.custom_PRINTPREFIXFORMAT("%d/%m %M:%S")
     bp.init()  # Initialization
-    bp.info("Everything is setted up properly!")
+    bp.info("Everything is set up properly!")
     bp.exit()  # Exit
     ```
     """
@@ -177,7 +177,7 @@ def custom_LOGFORMAT(fmt, datefmt):
     ```python
     bp.custom_LOGFORMAT('%(levelname)s : %(message)s', '%M:%S')
     bp.init()  # Initialization
-    bp.info("Everything is setted up properly!")
+    bp.info("Everything is set up properly!")
     bp.exit()  # Exit
     ```
     """
@@ -198,7 +198,7 @@ def disable_LOGFILE():
     ```python
     bp.disable_LOGFILE()  # Disables the log file
     bp.init()  # Initializes the printing format
-    bp.info("Everything is setted up properly!")  # Formats the text and prints it on the console only
+    bp.info("Everything is set up properly!")  # Formats the text and prints it on the console only
     bp.exit()  # Finishes the logging session
     ```
     """
@@ -216,11 +216,11 @@ def enable_LOGFILE():
     
     ```python
     bp.init()  # Initializes the printing format
-    bp.info("Everything is setted up properly!")  # Printed on the console and written in the log file
+    bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
     bp.disable_LOGFILE()  # Disables the log file
     bp.info("Just print this!")  # Only printed on the console
     bp.enable_LOGFILE()  # Enables the logging into the log file
-    bp.info("Everything is setted up properly!")  # Printed on the console and written in the log file
+    bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
     bp.exit()  # Finishes the logging session
     ```
     """
@@ -238,7 +238,7 @@ def disable_PRINTOUT():
     ```python
     bp.disable_PRINTOUT()  # Disables the console printing
     bp.init()  # Initialization
-    bp.info("Everything is setted up properly!")  # Formats the text and writes it in the log file only
+    bp.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
     bp.exit()  # Exit
     ```
     """
@@ -256,11 +256,11 @@ def enable_PRINTOUT():
     
     ```python
     bp.init()  # Initialization
-    bp.info("Everything is setted up properly!")  # Printed on the console and written in the log file
+    bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
     bp.disable_PRINTOUT()  # Disables the console printing
     bp.info("Just log this!")  # Only written in the log file
     bp.enable_PRINTOUT()  # Enables the console printing
-    bp.info("Everything is setted up properly!")  # Printed on the console and written in the log file
+    bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
     bp.exit()  # Finishes the logging session
     ```
     """
@@ -282,9 +282,9 @@ def info(text):
     
     if _PRINTOUT:
         prefix = time.strftime(_PRINTPREFIXFORMAT + " INFO : ")
-        print(prefix + text)
+        print(prefix + str(text))
     if _LOGFILE:
-        logging.info(text)
+        logging.info(str(text))
 
 
 def err(error):
@@ -300,9 +300,9 @@ def err(error):
     
     if _PRINTOUT:
         prefix = time.strftime(_PRINTPREFIXFORMAT + " ERROR : ")
-        print(prefix + error)
+        print(prefix + str(error))
     if _LOGFILE:
-        logging.error(error)
+        logging.error(str(error))
 
 
 def warn(warning):
@@ -318,9 +318,9 @@ def warn(warning):
     
     if _PRINTOUT:
         prefix = time.strftime(_PRINTPREFIXFORMAT + " WARNING : ")
-        print(prefix + warning)
+        print(prefix + str(warning))
     if _LOGFILE:
-        logging.warning(warning)
+        logging.warning(str(warning))
     
     
 def debug(debug_info):
@@ -336,9 +336,9 @@ def debug(debug_info):
     
     if _PRINTOUT:
         prefix = time.strftime(_PRINTPREFIXFORMAT + " DEBUG : ")
-        print(prefix + debug_info)
+        print(prefix + str(debug_info))
     if _LOGFILE:
-        logging.debug(debug_info)
+        logging.debug(str(debug_info))
 
 
 # Testing
