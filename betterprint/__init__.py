@@ -45,7 +45,8 @@ This module uses 3 other modules that it imports:
 (no need to install anything, all the 3 modules are in the Standard Python Module Library)
 
 
-This module was developed by [@Gruvw](https://github.com/gruvw).
+This module was developed by Lucas Jung alias [@Gruvw](https://github.com/gruvw).
+Contact me directly on GitHub or via E-Mail at: gruvw.dev@gmail.com
 """
 
 

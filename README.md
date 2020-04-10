@@ -28,6 +28,13 @@ That is it! A new way to print things in python! ✅
 Use BetterPrint to have a nice prefix before printing anything on the console output.
 It also creates a clean log file where you can find anything that you have printed during the program execution. 😊
 
+## ⚡️ Quick Start
+Installation is easy as:
+
+```bash
+pip install betterprint
+```
+
 ## Usage
 
 You need to initialize the module in order to have the log file set up properly:
@@ -42,7 +49,7 @@ bp.info("Everything is set up properly!")
 bp.exit()  # Finishes the logging file
 ```
 
-## Default example ✏️
+## ✏️ Default example
 
 ```python
 import betterprint as bp
@@ -237,4 +244,5 @@ bp.info("Everything is set up properly!")  # Printed on the console and written 
 bp.exit()  # Finishes the logging session
 ```
 
-This module was developed by [@Gruvw](https://github.com/gruvw).
+This module was developed by Lucas Jung alias [@Gruvw](https://github.com/gruvw).
+Contact me directly on GitHub or via E-Mail at: gruvw.dev@gmail.com
