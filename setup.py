@@ -1,16 +1,21 @@
 from distutils.core import setup
 
+try:
+    long_description=open('description.rst', encoding="UTF-8").read()
+except:
+    long_description=""
+
 setup(
     name = 'printbetter',         # How you named your package folder (MyLib)
     packages = ['printbetter'],   # Chose the same as "name"
-    version = '1.4',      # Start with a small number and increase it with every change you make
+    version = '1.5',      # Start with a small number and increase it with every change you make
     license='GPLv3',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description = 'Printing perfix and log file!',   # Give a short description about your library
-    long_description=open('description.rst', encoding="UTF-8").read(),
+    long_description=long_description,
     author = 'Gruvw',                   # Type in your name
     author_email = 'gruvw.dev@gmail.com',      # Type in your E-Mail
     url = 'https://github.com/gruvw/printbetter',   # Provide either the link to your github or to your website
-    download_url = 'https://github.com/gruvw/printbetter/archive/v_1.4.tar.gz',    # I explain this later on
+    download_url = 'https://github.com/gruvw/printbetter/archive/v_1.5.tar.gz',    # I explain this later on
     keywords = ['print', 'log', 'logging', 'time', 'console', 'better', 'printbetter', 'out', 'file', 'logs'],   # Keywords that define your package best
     install_requires=[],
     classifiers=[
