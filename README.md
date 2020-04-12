@@ -1,4 +1,4 @@
-# BetterPrint
+# PrintBetter
 
 ---
 
@@ -25,14 +25,14 @@ That is it! A new way to print things in python! ✅
 
 ## Features
 
-Use BetterPrint to have a nice prefix before printing anything on the console output.
+Use PrintBetter to have a nice prefix before printing anything on the console output.
 It also creates a clean log file where you can find anything that you have printed during the program execution. 😊
 
 ## ⚡️ Quick Start
-Installation is easy as:
+Installation is really simple:
 
 ```bash
-pip install betterprint
+pip install printbetter
 ```
 
 ## Usage
@@ -40,28 +40,28 @@ pip install betterprint
 You need to initialize the module in order to have the log file set up properly:
 
 ```python
-import betterprint as bp
+import printbetter as pb
 
-bp.init()  # Initializes the log file and the printing format
+pb.init()  # Initializes the log file and the printing format
 
-bp.info("Everything is set up properly!")
+pb.info("Everything is set up properly!")
 
-bp.exit()  # Finishes the logging file
+pb.exit()  # Finishes the logging file
 ```
 
 ## ✏️ Default example
 
 ```python
-import betterprint as bp
+import printbetter as pb
 
-bp.init()
+pb.init()
 
-bp.info("information")
-bp.debug("variable debug")
-bp.warn("warning")
-bp.err("error")
+pb.info("information")
+pb.debug("variable debug")
+pb.warn("warning")
+pb.err("error")
 
-bp.exit()
+pb.exit()
 ```
 
 ## Imports
@@ -146,10 +146,10 @@ Default: "logs/logfile_%d-%m-%y_%H.%M.%S.log"
 #### Example
 
 ```python
-bp.custom_LOGPATH("logs_files/log_from_%d-%m-%y.log")
-bp.init()  # Initialization
-bp.info("Everything is set up properly!")
-bp.exit()  # Exit
+pb.custom_LOGPATH("logs_files/log_from_%d-%m-%y.log")
+pb.init()  # Initialization
+pb.info("Everything is set up properly!")
+pb.exit()  # Exit
 ```
 
 ### Customize the print prefix `custom_PRINTPREFIXFORMAT(printPrefixFormat)`
@@ -161,10 +161,10 @@ Default: "[%d/%m/%y %H:%M:%S]"
 #### Example
 
 ```python
-bp.custom_PRINTPREFIXFORMAT("%d/%m %M:%S")
-bp.init()  # Initialization
-bp.info("Everything is set up properly!")
-bp.exit()  # Exit
+pb.custom_PRINTPREFIXFORMAT("%d/%m %M:%S")
+pb.init()  # Initialization
+pb.info("Everything is set up properly!")
+pb.exit()  # Exit
 ```
 
 ### Customize the log format `custom_LOGFORMAT(fmt, datefmt)`
@@ -177,71 +177,71 @@ Default datefmt: '%d/%m/%y %H:%M:%S'
 #### Example
 
 ```python
-bp.custom_LOGFORMAT('%(levelname)s : %(message)s', '%M:%S')
-bp.init()  # Initialization
-bp.info("Everything is set up properly!")
-bp.exit()  # Exit
+pb.custom_LOGFORMAT('%(levelname)s : %(message)s', '%M:%S')
+pb.init()  # Initialization
+pb.info("Everything is set up properly!")
+pb.exit()  # Exit
 ```
 
 ### Disable the log file feature `disable_LOGFILE()`
 
-Disables the creation of the log file and the logging into an existing log file for the next betterprint functions.
+Disables the creation of the log file and the logging into an existing log file for the next printbetter functions.
 You should call this before the initialization.
 
 #### Example
 
 ```python
-bp.disable_LOGFILE()  # Disables the log file
-bp.init()  # Initializes the printing format
-bp.info("Everything is set up properly!")  # Formats the text and prints it on the console only
-bp.exit()  # Finishes the logging session
+pb.disable_LOGFILE()  # Disables the log file
+pb.init()  # Initializes the printing format
+pb.info("Everything is set up properly!")  # Formats the text and prints it on the console only
+pb.exit()  # Finishes the logging session
 ```
 
 ### Enable the log file feature `enable_LOGFILE()`
 
-Re-enables the creation of the log file and the logging into the log file for next betterprint functions.
+Re-enables the creation of the log file and the logging into the log file for next printbetter functions.
 You should call this before the logging something in the log file.
 
 #### Example
 
 ```python
-bp.init()  # Initializes the printing format
-bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
-bp.disable_LOGFILE()  # Disables the log file
-bp.info("Just print this!")  # Only printed on the console
-bp.enable_LOGFILE()  # Enables the logging into the log file
-bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
-bp.exit()  # Finishes the logging session
+pb.init()  # Initializes the printing format
+pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
+pb.disable_LOGFILE()  # Disables the log file
+pb.info("Just print this!")  # Only printed on the console
+pb.enable_LOGFILE()  # Enables the logging into the log file
+pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
+pb.exit()  # Finishes the logging session
 ```
 
 ### Disable the print feature `disable_PRINTOUT()`
 
-Disables the printing on the console for next betterprint functions.
+Disables the printing on the console for next printbetter functions.
 
 #### Example
 
 ```python
-bp.disable_PRINTOUT()  # Disables the console printing
-bp.init()  # Initialization
-bp.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
-bp.exit()  # Exit
+pb.disable_PRINTOUT()  # Disables the console printing
+pb.init()  # Initialization
+pb.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
+pb.exit()  # Exit
 ```
 
 ### Enable the print feature `enable_PRINTOUT()`
 
-Re-enables the console printing for next betterprint functions.
+Re-enables the console printing for next printbetter functions.
 You should call this before the logging something on the console.
 
 #### Example
 
 ```python
-bp.init()  # Initialization
-bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
-bp.disable_PRINTOUT()  # Disables the console printing
-bp.info("Just log this!")  # Only written in the log file
-bp.enable_PRINTOUT()  # Enables the console printing
-bp.info("Everything is set up properly!")  # Printed on the console and written in the log file
-bp.exit()  # Finishes the logging session
+pb.init()  # Initialization
+pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
+pb.disable_PRINTOUT()  # Disables the console printing
+pb.info("Just log this!")  # Only written in the log file
+pb.enable_PRINTOUT()  # Enables the console printing
+pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
+pb.exit()  # Finishes the logging session
 ```
 
 This module was developed by Lucas Jung alias [@Gruvw](https://github.com/gruvw).
