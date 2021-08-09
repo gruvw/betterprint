@@ -45,8 +45,6 @@ import printbetter as pb
 pb.init()  # Initializes the log file and the printing format
 
 pb.info("Everything is set up properly!")
-
-pb.exit()  # Finishes the logging file
 ```
 
 ## ✏️ Default example
@@ -60,19 +58,16 @@ pb.info("information")
 pb.debug("variable debug")
 pb.warn("warning")
 pb.err("error")
-
-pb.exit()
 ```
 
 ## Imports
 
-This module uses 3 other modules that it imports:
+This module uses 2 other modules that it imports:
 
-- logging
 - time
 - os
 
-(no need to install anything, all the 3 modules are in the Standard Python Module Library)
+(no need to install anything, the 2 modules are in the Standard Python Module Library)
 
 ## Documentation
 
@@ -91,11 +86,6 @@ def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.lo
          logFormat='[%(asctime)s] %(levelname)s : %(message)s', logDateFmt='%d/%m/%y %H:%M:%S',
          printPrefixFormat="[%d/%m/%y %H:%M:%S]"):
 ```
-
-### Exit `exit()`
-
-You should call this function before the ending of your program.
-Terminates the logging module and finishes the log file.
 
 ### Information `info(text)`
 
@@ -137,52 +127,6 @@ Logs an error out.
 [09/04/20 11:14:40] ERROR : error
 ```
 
-### Customize the log path `custom_LOGPATH(path)`
-
-Sets the log file path. It has to be set before the initialization in order to work.
-Fully supports the `time.strftime` syntax. You can not use following characters: "\\ / : * ? \" > < |" !
-Default: "logs/logfile_%d-%m-%y_%H.%M.%S.log"
-
-#### Example
-
-```python
-pb.custom_LOGPATH("logs_files/log_from_%d-%m-%y.log")
-pb.init()  # Initialization
-pb.info("Everything is set up properly!")
-pb.exit()  # Exit
-```
-
-### Customize the print prefix `custom_PRINTPREFIXFORMAT(printPrefixFormat)`
-
-Sets the print prefix format for console printing. It should be set before the initialization.
-Fully supports the `time.strftime` syntax.
-Default: "[%d/%m/%y %H:%M:%S]"
-
-#### Example
-
-```python
-pb.custom_PRINTPREFIXFORMAT("%d/%m %M:%S")
-pb.init()  # Initialization
-pb.info("Everything is set up properly!")
-pb.exit()  # Exit
-```
-
-### Customize the log format `custom_LOGFORMAT(fmt, datefmt)`
-
-Sets the two arguments (format:fmt and datefmt:datefmt) of the logging.basicConfig function from the logging module. It has to be set before the initialization in order to work.
-Fully supports the `time.strftime` syntax. Please see [Logging module documentation](https://docs.python.org/3/library/logging.html) for further details.
-Default format: '[%(asctime)s] %(levelname)s : %(message)s'
-Default datefmt: '%d/%m/%y %H:%M:%S'
-
-#### Example
-
-```python
-pb.custom_LOGFORMAT('%(levelname)s : %(message)s', '%M:%S')
-pb.init()  # Initialization
-pb.info("Everything is set up properly!")
-pb.exit()  # Exit
-```
-
 ### Disable the log file feature `disable_LOGFILE()`
 
 Disables the creation of the log file and the logging into an existing log file for the next printbetter functions.
@@ -194,7 +138,6 @@ You should call this before the initialization.
 pb.disable_LOGFILE()  # Disables the log file
 pb.init()  # Initializes the printing format
 pb.info("Everything is set up properly!")  # Formats the text and prints it on the console only
-pb.exit()  # Finishes the logging session
 ```
 
 ### Enable the log file feature `enable_LOGFILE()`
@@ -211,7 +154,6 @@ pb.disable_LOGFILE()  # Disables the log file
 pb.info("Just print this!")  # Only printed on the console
 pb.enable_LOGFILE()  # Enables the logging into the log file
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-pb.exit()  # Finishes the logging session
 ```
 
 ### Disable the print feature `disable_PRINTOUT()`
@@ -224,7 +166,6 @@ Disables the printing on the console for next printbetter functions.
 pb.disable_PRINTOUT()  # Disables the console printing
 pb.init()  # Initialization
 pb.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
-pb.exit()  # Exit
 ```
 
 ### Enable the print feature `enable_PRINTOUT()`
@@ -241,7 +182,6 @@ pb.disable_PRINTOUT()  # Disables the console printing
 pb.info("Just log this!")  # Only written in the log file
 pb.enable_PRINTOUT()  # Enables the console printing
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-pb.exit()  # Finishes the logging session
 ```
 
 This module was developed by Lucas Jung alias [@Gruvw](https://github.com/gruvw).

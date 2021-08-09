@@ -24,8 +24,6 @@ Default example:
    pb.warn("warning")
    pb.err("error")
 
-   pb.exit()
-
 This module was developed by `@Gruvw`_.
 
 .. _GitHub repository: https://github.com/gruvw/printbetter/
