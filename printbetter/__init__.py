@@ -48,18 +48,18 @@ import time
 import os
 
 
-_LOGFILE = True
-_PRINTOUT = True
-_LOGPATH = "logs/logfile_%d-%m-%y_%H.%M.%S.log"
-_LOGFILEPATH = ""
-_PRINTPREFIXFORMAT = "[%d/%m/%y %H:%M:%S]"
-_LOGFORMAT = '[%(asctime)s] %(levelname)s : %(message)s'
-_LOGDATEFMT = '%d/%m/%y %H:%M:%S'
+_LOG_FILE = True
+_PRINT_OUT = True
+_LOG_PATH = "logs/logfile_%d-%m-%y_%H.%M.%S.log"
+_LOG_FILE_PATH = ""
+_PRINT_PREFIX_FORMAT = "[%d/%m/%y %H:%M:%S]"
+_LOG_FORMAT = '[%(asctime)s] %(levelname)s : %(message)s'
+_LOG_DATE_FMT = '%d/%m/%y %H:%M:%S'
 
 
-def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.log",
-         logFormat='[%(asctime)s] %(levelname)s : %(message)s', logDateFmt='%d/%m/%y %H:%M:%S',
-         printPrefixFormat="[%d/%m/%y %H:%M:%S]"):
+def init(print_out=True, log_file=True, log_path="logs/logfile_%d-%m-%y_%H.%M.%S.log",
+         log_format='[%(asctime)s] %(levelname)s : %(message)s', log_date_fmt='%d/%m/%y %H:%M:%S',
+         print_prefix_format="[%d/%m/%y %H:%M:%S]"):
     """
     ### Initialization
 
@@ -68,108 +68,105 @@ def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.lo
     If needed, all the different parameters can be set here.
     """
 
-    global _PRINTOUT
-    global _LOGFILE
-    global _LOGPATH
-    global _LOGFILEPATH
-    global _PRINTPREFIXFORMAT
-    global _LOGFORMAT
-    global _LOGDATEFMT
+    global _PRINT_OUT
+    global _LOG_FILE
+    global _LOG_PATH
+    global _LOG_FILE_PATH
+    global _PRINT_PREFIX_FORMAT
+    global _LOG_FORMAT
+    global _LOG_DATE_FMT
 
-    _PRINTOUT = printOut
-    _LOGFILE = logFile
-    _LOGPATH = logPath
-    _PRINTPREFIXFORMAT = printPrefixFormat
-    _LOGFORMAT = logFormat
-    _LOGDATEFMT = logDateFmt
+    _PRINT_OUT = print_out
+    _LOG_FILE = log_file
+    _LOG_PATH = log_path
+    _PRINT_PREFIX_FORMAT = print_prefix_format
+    _LOG_FORMAT = log_format
+    _LOG_DATE_FMT = log_date_fmt
 
-    if _LOGFILE:
+    if _LOG_FILE:
         # Creating a new log file
-        _LOGFILEPATH = time.strftime(_LOGPATH)
-        if not os.path.exists(os.path.dirname(_LOGFILEPATH)):
-            os.makedirs(os.path.dirname(_LOGFILEPATH))
-        with open(_LOGFILEPATH, 'w') as f:
+        _LOG_FILE_PATH = time.strftime(_LOG_PATH)
+        if not os.path.exists(os.path.dirname(_LOG_FILE_PATH)):
+            os.makedirs(os.path.dirname(_LOG_FILE_PATH))
+        with open(_LOG_FILE_PATH, 'w') as f:
             pass
 
     # Everything is set
     info("Log file is set up!")
 
 
-def disable_LOGFILE():
+def disable_LOG_FILE():
     """
     Disables the creation of the log file and the logging into an existing log file for the next printbetter functions.
-    You should call this before the initialization.
 
     #### Example:
 
     ```python
-    pb.disable_LOGFILE()  # Disables the log file
+    pb.disable_LOG_FILE()  # Disables the log file
     pb.init()  # Initializes the printing format
     pb.info("Everything is set up properly!")  # Formats the text and prints it on the console only
     ```
     """
 
-    global _LOGFILE
-    _LOGFILE = False
+    global _LOG_FILE
+    _LOG_FILE = False
 
 
-def enable_LOGFILE():
+def enable_LOG_FILE():
     """
     Re-enables the creation of the log file and the logging into the log file for next printbetter functions.
-    You should call this before the logging something in the log file.
 
     #### Example:
 
     ```python
     pb.init()  # Initializes the printing format
     pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-    pb.disable_LOGFILE()  # Disables the log file
+    pb.disable_LOG_FILE()  # Disables the log file
     pb.info("Just print this!")  # Only printed on the console
-    pb.enable_LOGFILE()  # Enables the logging into the log file
+    pb.enable_LOG_FILE()  # Enables the logging into the log file
     pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
     ```
     """
 
-    global _LOGFILE
-    _LOGFILE = True
+    global _LOG_FILE
+    _LOG_FILE = True
 
 
-def disable_PRINTOUT():
+def disable_PRINT_OUT():
     """
     Disables the printing on the console for next printbetter functions.
 
     #### Example:
 
     ```python
-    pb.disable_PRINTOUT()  # Disables the console printing
+    pb.disable_PRINT_OUT()  # Disables the console printing
     pb.init()  # Initialization
     pb.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
     ```
     """
 
-    global _PRINTOUT
-    _PRINTOUT = False
+    global _PRINT_OUT
+    _PRINT_OUT = False
 
 
-def enable_PRINTOUT():
+def enable_PRINT_OUT():
     """
     Re-enables the console printing for next printbetter functions.
-    You should call this before the logging something on the console.
 
     #### Example:
 
     ```python
     pb.init()  # Initialization
     pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-    pb.disable_PRINTOUT()  # Disables the console printing
+    pb.disable_PRINT_OUT()  # Disables the console printing
     pb.info("Just log this!")  # Only written in the log file
-    pb.enable_PRINTOUT()  # Enables the console printing
+    pb.enable_PRINT_OUT()  # Enables the console printing
     pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
     ```
     """
 
-    global _PRINTOUT
-    _PRINTOUT = True
+    global _PRINT_OUT
+    _PRINT_OUT = True
 
 
 def info(text):
@@ -183,11 +180,11 @@ def info(text):
     ```
     """
 
-    prefix = time.strftime(_PRINTPREFIXFORMAT + " INFO : ")
-    if _PRINTOUT:
+    prefix = time.strftime(_PRINT_PREFIX_FORMAT + " INFO : ")
+    if _PRINT_OUT:
         print(prefix + str(text))
-    if _LOGFILE:
-        with open(_LOGFILEPATH, 'a') as f:
+    if _LOG_FILE:
+        with open(_LOG_FILE_PATH, 'a') as f:
             f.write(prefix + str(text) + '\n')
 
 
@@ -202,11 +199,11 @@ def err(error):
     ```
     """
 
-    prefix = time.strftime(_PRINTPREFIXFORMAT + " ERROR : ")
-    if _PRINTOUT:
+    prefix = time.strftime(_PRINT_PREFIX_FORMAT + " ERROR : ")
+    if _PRINT_OUT:
         print(prefix + str(error))
-    if _LOGFILE:
-        with open(_LOGFILEPATH, 'a') as f:
+    if _LOG_FILE:
+        with open(_LOG_FILE_PATH, 'a') as f:
             f.write(prefix + str(error) + '\n')
 
 
@@ -221,11 +218,11 @@ def warn(warning):
     ```
     """
 
-    prefix = time.strftime(_PRINTPREFIXFORMAT + " WARNING : ")
-    if _PRINTOUT:
+    prefix = time.strftime(_PRINT_PREFIX_FORMAT + " WARNING : ")
+    if _PRINT_OUT:
         print(prefix + str(warning))
-    if _LOGFILE:
-        with open(_LOGFILEPATH, 'a') as f:
+    if _LOG_FILE:
+        with open(_LOG_FILE_PATH, 'a') as f:
             f.write(prefix + str(warning) + '\n')
 
 
@@ -240,11 +237,11 @@ def debug(debug_info):
     ```
     """
 
-    prefix = time.strftime(_PRINTPREFIXFORMAT + " DEBUG : ")
-    if _PRINTOUT:
+    prefix = time.strftime(_PRINT_PREFIX_FORMAT + " DEBUG : ")
+    if _PRINT_OUT:
         print(prefix + str(debug_info))
-    if _LOGFILE:
-        with open(_LOGFILEPATH, 'a') as f:
+    if _LOG_FILE:
+        with open(_LOG_FILE_PATH, 'a') as f:
             f.write(prefix + str(debug_info) + '\n')
 
 

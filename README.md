@@ -82,9 +82,9 @@ If needed all the different parameters are here to set each variable without usi
 #### Definition
 
 ```python
-def init(printOut=True, logFile=True, logPath="logs/logfile_%d-%m-%y_%H.%M.%S.log",
-         logFormat='[%(asctime)s] %(levelname)s : %(message)s', logDateFmt='%d/%m/%y %H:%M:%S',
-         printPrefixFormat="[%d/%m/%y %H:%M:%S]"):
+def init(print_out=True, log_file=True, log_path="logs/logfile_%d-%m-%y_%H.%M.%S.log",
+         log_format='[%(asctime)s] %(levelname)s : %(message)s', log_date_fmt='%d/%m/%y %H:%M:%S',
+         print_prefix_format="[%d/%m/%y %H:%M:%S]"):
 ```
 
 ### Information `info(text)`
@@ -127,60 +127,57 @@ Logs an error out.
 [09/04/20 11:14:40] ERROR : error
 ```
 
-### Disable the log file feature `disable_LOGFILE()`
+### Disable the log file feature `disable_LOG_FILE()`
 
 Disables the creation of the log file and the logging into an existing log file for the next printbetter functions.
-You should call this before the initialization.
 
 #### Example
 
 ```python
-pb.disable_LOGFILE()  # Disables the log file
+pb.disable_LOG_FILE()  # Disables the log file
 pb.init()  # Initializes the printing format
 pb.info("Everything is set up properly!")  # Formats the text and prints it on the console only
 ```
 
-### Enable the log file feature `enable_LOGFILE()`
+### Enable the log file feature `enable_LOG_FILE()`
 
 Re-enables the creation of the log file and the logging into the log file for next printbetter functions.
-You should call this before the logging something in the log file.
 
 #### Example
 
 ```python
 pb.init()  # Initializes the printing format
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-pb.disable_LOGFILE()  # Disables the log file
+pb.disable_LOG_FILE()  # Disables the log file
 pb.info("Just print this!")  # Only printed on the console
-pb.enable_LOGFILE()  # Enables the logging into the log file
+pb.enable_LOG_FILE()  # Enables the logging into the log file
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
 ```
 
-### Disable the print feature `disable_PRINTOUT()`
+### Disable the print feature `disable_PRINT_OUT()`
 
 Disables the printing on the console for next printbetter functions.
 
 #### Example
 
 ```python
-pb.disable_PRINTOUT()  # Disables the console printing
+pb.disable_PRINT_OUT()  # Disables the console printing
 pb.init()  # Initialization
 pb.info("Everything is set up properly!")  # Formats the text and writes it in the log file only
 ```
 
-### Enable the print feature `enable_PRINTOUT()`
+### Enable the print feature `enable_PRINT_OUT()`
 
 Re-enables the console printing for next printbetter functions.
-You should call this before the logging something on the console.
 
 #### Example
 
 ```python
 pb.init()  # Initialization
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
-pb.disable_PRINTOUT()  # Disables the console printing
+pb.disable_PRINT_OUT()  # Disables the console printing
 pb.info("Just log this!")  # Only written in the log file
-pb.enable_PRINTOUT()  # Enables the console printing
+pb.enable_PRINT_OUT()  # Enables the console printing
 pb.info("Everything is set up properly!")  # Printed on the console and written in the log file
 ```
 
