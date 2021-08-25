@@ -8,14 +8,14 @@ except:
 setup(
     name = 'printbetter',
     packages = ['printbetter'],
-    version = '2.0',
+    version = '2.2',
     license='GPLv3',
     description = 'Printing perfix and log file!',
     long_description=long_description,
     author = 'Gruvw',
     author_email = 'gruvw.dev@gmail.com',
     url = 'https://github.com/gruvw/printbetter',
-    download_url = 'https://github.com/gruvw/printbetter/archive/v_2.0.tar.gz',
+    download_url = 'https://github.com/gruvw/printbetter/archive/v_2.2.tar.gz',
     keywords = ['print', 'log', 'logging', 'time', 'console', 'better', 'printbetter', 'out', 'file', 'logs'],
     install_requires=[],
     classifiers=[
